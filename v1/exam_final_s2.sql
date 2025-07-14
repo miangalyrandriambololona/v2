@@ -36,6 +36,7 @@ CREATE TABLE exam_emprunt(
     FOREIGN KEY (id_objet) REFERENCES exam_objet(id_objet),
     FOREIGN KEY (id_membre) REFERENCES exam_membre(id_membre)
 );
+ALTER TABLE exam_objet ADD COLUMN description TEXT;
 
 --4membres
 INSERT INTO exam_membre (id_membre, nom, date_de_naissance, genre, email, ville, mdp, image_profil) VALUES
